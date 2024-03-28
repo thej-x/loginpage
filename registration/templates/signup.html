@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <style>
+    .form-outline{
+      color: rgba(221, 221, 219, 0.76);
+    }
+  </style>
+</head>
+<body>
+    <!-- Section: Design Block -->
+<!-- Section: Design Block -->
+<section class="text-center">
+  
+    <div class="card p-2 shadow-5-strong" style="
+          background-image: url('../static/bg.jpg');
+          background-size: cover;
+          ">
+      <div class="card-body py-5 px-md-5">
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-5">
+            <h2 class="fw-bold mb-5">Sign up now</h2>
+            <form action="" method="post">
+                {% csrf_token %}
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                
+                    <input type="text" id="form3Example1" class="form-control" name="fname" id="fname" required/>
+                    <label class="form-label" for="form3Example1" >First name</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" name="lname" id="lname" required/>
+                    <label class="form-label" for="form3Example2" >Last name</label>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="form-outline mb-4">
+                <input type="email" id="form3Example3" class="form-control" name="username" id="username"/>
+                <label class="form-label" for="form3Example3" >User name</label>
+              </div> -->
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="form3Example3" class="form-control" name="email" id="email"/>
+                <label class="form-label" for="form3Example3" >Email address</label>
+              </div>
+  
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="form3Example4" class="form-control" name="password1" id="password1" />
+                <label class="form-label" for="form3Example4" >Password</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="password" id="form3Example4" class="form-control" name="password2" id="password2" />
+                <label class="form-label" for="form3Example4">Confirm Password</label>
+              </div>
+
+  
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-secondary btn-block mb-4">
+                Sign up
+              </button>
+              <a href="{% url 'login' %}">Already have an account? click here</a>
+              
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+
+
+
+</body>
+
+
+</html>
