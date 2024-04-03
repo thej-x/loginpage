@@ -59,9 +59,17 @@
                 <input type="password" id="form3Example4" class="form-control" name="password1" id="password1" />
                 <label class="form-label" for="form3Example4" >Password</label>
               </div>
+
               <div class="form-outline mb-4">
                 <input type="password" id="form3Example4" class="form-control" name="password2" id="password2" />
                 <label class="form-label" for="form3Example4">Confirm Password</label>
+              </div>
+              <div>
+                {% if messages %}
+                {% for message in messages %}
+                  <p>{{message}}</p>
+                {% endfor %}
+              {% endif %}
               </div>
 
   

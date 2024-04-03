@@ -25,7 +25,8 @@ def SignupPage(request):
         pass1 = request.POST.get('password1')
         pass2 = request.POST.get('password2')
         if pass1!=pass2:
-            return HttpResponse("password not match")
+            messages.error(request,"passwords not matching")
+            return redirect('signup') 
         else:
         # Create user object
             my_user = User.objects.create_user(username=email, email=email)
@@ -62,3 +63,12 @@ def Loginpage(request):
 def Logoutpage(request):
     logout(request)
     return redirect('login')
+
+    
+    
+
+
+
+
+
+
