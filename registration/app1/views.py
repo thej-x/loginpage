@@ -26,7 +26,7 @@ def SignupPage(request):
         pass2 = request.POST.get('password2')
         if pass1!=pass2:
             messages.error(request,"passwords not matching")
-            return redirect('signup') 
+            return redirect('signup')
         else:
         # Create user object
             my_user = User.objects.create_user(username=email, email=email)
@@ -34,7 +34,7 @@ def SignupPage(request):
             # Set first name and last name
             my_user.first_name = fname
             my_user.last_name = lname
-            
+
             # Set password
             my_user.set_password(pass1)
             
@@ -64,7 +64,7 @@ def Logoutpage(request):
     logout(request)
     return redirect('login')
 
-    
+   
     
 
 
