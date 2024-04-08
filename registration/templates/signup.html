@@ -9,6 +9,10 @@
   <style>
     .form-outline{
       color: rgba(221, 221, 219, 0.76);
+    
+    }
+    #mssg{
+      color: rgba(221, 221, 219, 0.76);
     }
   </style>
 </head>
@@ -64,7 +68,7 @@
                 <input type="password" id="form3Example4" class="form-control" name="password2" id="password2" />
                 <label class="form-label" for="form3Example4">Confirm Password</label>
               </div>
-              <div>
+              <div id="mssg">
                 {% if messages %}
                 {% for message in messages %}
                   <p>{{message}}</p>
