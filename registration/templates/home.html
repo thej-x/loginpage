@@ -24,8 +24,13 @@
 <body class="bg">
     <div class="home">
     <h1>Home page</h1>
-    <p style="text-align: center;" >welcome back {{a}}!</p>
-    <button type="button" class="btn btn-success btn-lg" ><a href="{%url 'logout'%}">logout</a></button>
+    <p style="text-align: center;" >welcome {{a}}!</p>
+    <button type="button" class="btn btn-success btn-lg" ><a href="{% url 'logout'%}">Logout</a></button>
+    <br><br>
+    {% if request.user.is_superuser %}
+    <button type="button" class="btn btn-light btn-md"><a href="{% url 'adminpage' %}">Admin panel</a></button>
+    {% endif %}
+
 </div>
 </body>
 </html>

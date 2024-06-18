@@ -20,8 +20,14 @@ from app1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.SignupPage,name='signup'),
-    path('login/',views.Loginpage,name='login'),
-    path('home/',views.HomePage,name='home'),
-    path('logout/',views.Logoutpage,name='logout'),
-]
+    path('',views.signupPage,name='signup'),
+    path('login/',views.loginpage,name='login'),
+    path('home/',views.homePage,name='home'),
+    path('logout/',views.logoutpage,name='logout'),
+    path('adminpage/',views.adminpage,name='adminpage'),
+    path('add/',views.add,name='add'),
+    path('edit/',views.edit,name='edit'),
+    path('update/<str:id>',views.update,name='update'),
+    path('delete/<str:id>',views.delete,name='delete'),
+    
+] #last commit

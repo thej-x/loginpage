@@ -34,32 +34,32 @@
                 {% csrf_token %}
               <!-- 2 column grid layout with text inputs for the first and last names -->
               <div class="row">
-                <div class="col-md-6 mb-4">
+                <div class="col mb-4">
                   <div class="form-outline">
                 
-                    <input type="text" id="form3Example1" class="form-control" name="fname" id="fname" required/>
-                    <label class="form-label" for="form3Example1" >First name</label>
+                    <input type="text" id="form3Example1" class="form-control" name="uname" id="uname" required/>
+                    <label class="form-label" for="form3Example1" >User name</label>
                   </div>
                 </div>
-                <div class="col-md-6 mb-4">
+                <!-- <div class="col-md-6 mb-4">
                   <div class="form-outline">
                     <input type="text" id="form3Example2" class="form-control" name="lname" id="lname" required/>
-                    <label class="form-label" for="form3Example2" >Last name</label>
-                  </div>
-                </div>
+                    <label class="form-label" for="form3Example2" >Last name</label> -->
+                  <!-- </div>
+                </div> -->
               </div>
               <!-- <div class="form-outline mb-4">
                 <input type="email" id="form3Example3" class="form-control" name="username" id="username"/>
                 <label class="form-label" for="form3Example3" >User name</label>
               </div> -->
               <!-- Email input -->
-              <div class="form-outline mb-4">
+              <div class="form-outline  mb-4">
                 <input type="email" id="form3Example3" class="form-control" name="email" id="email"/>
                 <label class="form-label" for="form3Example3" >Email address</label>
               </div>
   
               <!-- Password input -->
-              <div class="form-outline mb-4">
+              <div class="form-outline  mb-4">
                 <input type="password" id="form3Example4" class="form-control" name="password1" id="password1" />
                 <label class="form-label" for="form3Example4" >Password</label>
               </div>
@@ -68,12 +68,17 @@
                 <input type="password" id="form3Example4" class="form-control" name="password2" id="password2" />
                 <label class="form-label" for="form3Example4">Confirm Password</label>
               </div>
+             
               <div id="mssg">
+                
                 {% if messages %}
                 {% for message in messages %}
-                  <p>{{message}}</p>
+                  <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                  </div>
                 {% endfor %}
               {% endif %}
+              
               </div>
 
   
